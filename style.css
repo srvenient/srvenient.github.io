@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
+
+:root {
+    --header-height: 3.5rem;
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(14, 98%, 50%);
+    --black-color: hsl(0, 0%, 0%);
+    --black-color-light: hsl(0, 0%, 40%);
+    --white-color: hsl(0, 0%, 95%);
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 64%);
+    --body-color: hsl(0, 0%, 87%);
+    --container-color: hsl(0, 0%, 83%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Bai Jamjuree", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: rgb(14, 23, 42);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(14, 23, 42);
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    position: relative;
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__toggle,
+.nav__close {
+    display: none;
+}
+
+.nav__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo {
+    color: aqua;
+    column-gap: .5rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.nav__logo i {
+    font-size: 1.25rem;
+    font-weight: initial;
+}
+
+/* A hexegone with the letter N is created to establish the Logo. */
+.nav__logo-name {
+    display: flex;
+    column-gap: .5rem;
+    align-items: center;
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.nav__logo-name {
+    width: 32px;
+    height: 42px;
+    background-color: rgb(14, 23, 42);
+    color: aqua;
+    display: grid;
+    place-items: center;
+}
+
+.nav__logo-name {
+    width: 43.50px;
+    height: 50.47px;
+    background-color: rgb(14, 23, 42);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    margin-top: 30px;
+    margin-left: 60px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.nav__logo-hexagon {
+    width: 47.50px;
+    height: 54.47px;
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    margin-top: 30px;
+    margin-left: 60px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    box-sizing: border-box;
+
+}
+
+/* ------------------------------------------------------------------------ */
+
+.nav__menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 4.5rem;
+}
+
+
+.nav__toggle {
+    background-color: var(--first-color-alt);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1rem 1.25rem;
+    border: 2px solid aqua;
+    color: aqua;
+    cursor: pointer;
+}
+
+.nav__close {
+    background-color: var(--first-color-alt);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    row-gap: 2.5rem;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 60px;
+    margin-left: auto;
+        flex-direction: row;
+        column-gap: 2rem;
+}
+
+.nav__link {
+    color: antiquewhite;
+    font-weight: 0px;
+    transition: color .4s;
+}
+
+.nav__link-number {
+    color: aqua;
+}
+
+.nav__link:hover {
+    color: aqua;
+}
+
+.nav__button {
+    display: inline-block;
+    width: max-content;
+    background-color: rgb(14, 23, 42);
+    border: 2px solid rgb(0, 255, 255);
+    padding: 1rem 1.5rem;
+    border-radius: 6%;
+    color: aqua;
+    font-weight: initial;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 60px;
+}
+
+.nav__close {
+    position: absolute;
+    top: .75rem;
+    right: 1.5rem;
+}
+
+/* Show menu */
+.show-menu {
+    right: 0;
+}
+
+/*=============== HOME ===============*/
+.home {
+    position: absolute;
+    margin-left: 52vh;
+    height: 100vh;
+    display: grid;
+}
+
+.home__container {
+    padding-top: 33vh;
+    row-gap: 1rem;
+    grid-template-columns: repeat(2, 350px);
+    align-items: center;
+    z-index: 5;
+}
+
+.home__content {
+    text-align: left;
+    margin-inline: 0;
+}
+
+.home__introduction {
+    font-size: 17px;
+    font-weight: 100;
+    margin-bottom: .5rem;
+    letter-spacing: 1px;
+    color: aqua;
+}
+
+.home__title {
+    position: relative;
+    width: max-content;
+    margin: 0 auto .75rem;
+    font-size: 55px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: -3px;
+    margin-bottom: 1rem;
+    margin-inline: 0;
+}
+
+.home__subtitle {
+    font-size: 45px;
+    font-weight: 450;
+    margin-bottom: .5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.home__description {
+    line-height: 150%;
+    margin-bottom: 1.25rem;
+    font-size: 23px;
+    margin-bottom: .5rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: var(--h3-font-size);
+    margin-bottom: 3rem;
+}
+
+.home__button {
+    display: inline-block;
+    width: max-content;
+    background-color: rgb(14, 23, 42);
+    border: 2px solid aqua;
+    padding: 1rem 1.5rem;
+    color: aqua;
+    font-weight: var(--font-semi-bold);
+}
