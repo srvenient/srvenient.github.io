@@ -1,1 +1,1 @@
-Page[https://srvenient.github.io/]
+https://srvenient.github.io/
