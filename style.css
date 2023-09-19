@@ -202,8 +202,8 @@ img {
     margin-top: 30px;
     margin-right: 60px;
     margin-left: auto;
-        flex-direction: row;
-        column-gap: 2rem;
+    flex-direction: row;
+    column-gap: 2rem;
 }
 
 .nav__link {
@@ -311,3 +311,50 @@ img {
     color: aqua;
     font-weight: var(--font-semi-bold);
 }
+
+.contact-section {
+    padding: 3em;
+}
+
+.container-contact {
+    margin: 0 auto;
+    margin-top: 10em;
+}
+
+.contact-section img {
+    width: 750px;
+    height: 700px;
+    bottom: 0px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em;
+  }
+  .form-group textarea {
+    height: 150px;
+    padding: 1.5em;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .input {
+    padding: 10px 20px;
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  
+  .form-group .btn-submit {
+    padding: 10px 20px;
+    margin: 1em;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    background-color: aqua;
+  }
